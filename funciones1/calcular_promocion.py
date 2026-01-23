@@ -1,9 +1,6 @@
 from colorama import Fore, Back, Style, init
-from notas_y_asistencia import notas_y_asistencia
 
-notas_y_asistencia()
-
-def calcular_promocion():
+def calcular_promocion(n1, n2, n3, asistencia):
 
     media = (n1 + n2 + n3) /3
     media_redondeada = round(media, 2)
@@ -25,3 +22,5 @@ def calcular_promocion():
     else:
         print(Fore.RED+"Suspende ❌"+Style.RESET_ALL)
         promociona = False
+    
+    return media_redondeada, promociona

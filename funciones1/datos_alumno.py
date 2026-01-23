@@ -38,6 +38,8 @@ def datos_alumno():
         else:
             print(Fore.GREEN+"La edad es válida"+Style.RESET_ALL)
             break
+    
+    return nombre, primer_apellido, segundo_apellido, edad
 
 
 
