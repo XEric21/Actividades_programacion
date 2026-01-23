@@ -1,0 +1,11 @@
+nombres = []
+primer_apellido_lista = []
+segundo_apellido_lista = []
+edad_lista = []
+
+notas1 = []
+notas2 = []
+notas3 = []
+asistencias = []
+medias = []
+promociones = []

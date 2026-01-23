@@ -1,6 +1,11 @@
 from colorama import Fore, Back, Style, init
-
+nombres = []
+primer_apellido_lista = []
+segundo_apellido_lista = []
+edad_lista = []
 def datos_alumno():
+    
+
     while True:
         nombre = str(input ("Dime cual es tu nombre: "))
         if nombre.replace(" ", "").isalpha():
@@ -30,14 +35,17 @@ def datos_alumno():
             print(Fore.RED+"El segundo apellido no es válido ❌, por favor vuelve a introducirlo: "+Style.RESET_ALL)
 
     while True:
-        edad = int(input ("Dime cual es tu edad: "))
-        if edad < 16:
-            print(Fore.RED+"Esa edad no es válida ❌, vuelve a introducir una válida: "+Style.RESET_ALL)
-        elif edad > 90:
-            print(Fore.RED+"Esa edad no es válida ❌, vuelve a introducir una que sea válida: "+Style.RESET_ALL)
-        else:
-            print(Fore.GREEN+"La edad es válida"+Style.RESET_ALL)
-            break
+        try:
+            edad = int(input ("Dime cual es tu edad: "))
+            if edad < 16:
+                print(Fore.RED+"Esa edad no es válida ❌, vuelve a introducir una válida: "+Style.RESET_ALL)
+            elif edad > 90:
+                print(Fore.RED+"Esa edad no es válida ❌, vuelve a introducir una que sea válida: "+Style.RESET_ALL)
+            else:
+                print(Fore.GREEN+"La edad es válida"+Style.RESET_ALL)
+                break
+        except ValueError:
+            print(Fore.RED+"La edad debe ser un número ❌, por favor vuelve a introducirla: "+Style.RESET_ALL)
     
     return nombre, primer_apellido, segundo_apellido, edad
 
