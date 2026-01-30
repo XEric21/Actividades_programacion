@@ -28,8 +28,32 @@ while True:
     medias.append(media_redondeada)
     promociones.append(promociona)
 
-    informe_final(n, a1, a2, n1, n2, n3, media_redondeada, asistencia, promociona)
-
     mas_alumnos = input("Quieres meter otro alumno? (si/no): ").lower()
     if mas_alumnos != "si":
         break
+ver_informes = input("Quieres ver algun informe? (si/no)").lower()
+
+while ver_informes == "si":
+    buscar_alumno = input ("Que alumno quieres buscar?").lower()
+
+    alumno_encontrado= False
+
+    for i, nombre in enumerate(nombres):
+        if nombre.lower() == buscar_alumno:
+
+        informe_final(
+            nombres[i],
+            primer_apellido_lista[i],
+            segundo_apellido_lista[i],
+            notas1[i],
+            notas2[i],
+            notas3[i],
+            medias[i],
+            asistencias[i],
+            promociones[i]
+        )
+    else:
+        print ("Ese alumno no esta")
+    ver_informes = input ("Quieres ver otro? si/no").lower()
+
+print ("Saliendo...")
