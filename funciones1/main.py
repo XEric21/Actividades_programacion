@@ -1,3 +1,5 @@
+#Este es el programa final, con excepciones, funciones y listas. El programa permite ingresar los datos de varios alumnos, calcular su media y promocion, y luego buscar informes individuales de cada alumno.
+
 import time
 from menu import menu_bienvenida
 from datos_alumno import datos_alumno
